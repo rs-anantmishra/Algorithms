@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"strconv"
+)
+
 type Grid struct {
 	Row int
 	Col int
@@ -35,4 +40,30 @@ func GridTraveler(m int, n int) int {
 	}
 
 	return GridTraveler(m-1, n) + GridTraveler(m, n-1)
+}
+
+func CallGridTraveler(args []string) {
+
+	var computation string
+	//In how many ways can you travel to the goal of a grid of dim=m*n
+	//only move down or right. //start: top-left //end: bottom-right
+	if len(args) == 5 {
+		computation = args[4]
+	}
+
+	m, _ := strconv.Atoi(args[2])
+	n, _ := strconv.Atoi(args[3])
+
+	var g Grid
+	g.Row = m
+	g.Col = n
+	var mapster = make(map[Grid]int)
+
+	switch {
+	case computation == "memo" || computation == "Memo" || computation == "m":
+		fmt.Println(GridTravelerMemo(g, mapster))
+	default:
+		fmt.Println(GridTraveler(m, n))
+	}
+
 }
