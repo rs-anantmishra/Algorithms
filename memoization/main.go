@@ -40,4 +40,8 @@ func main() {
 	if os.Args[1] == "bestsum" {
 		CallBestSum(os.Args)
 	}
+
+	if os.Args[1] == "canconstruct" {
+		CallCanConstruct(os.Args)
+	}
 }

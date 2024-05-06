@@ -7,11 +7,18 @@ func CallBestSum(args []string) {
 	targetSum := 343
 	numbers := []int{7, 14}
 
-	//result := bestSum(targetSum, numbers)
+	if args[2] == "m" {
+		memo := map[int][]int{}
+		result := memoBestSum(targetSum, numbers, memo)
+		fmt.Println(result)
+	} else {
+		result := bestSum(targetSum, numbers)
+		fmt.Println(result)
+	}
+
+	//allSum is not completed
 	//result := allSum(targetSum, numbers)
-	memo := map[int][]int{}
-	result := memoBestSum(targetSum, numbers, memo)
-	fmt.Println(result)
+	//fmt.Println(result)
 
 }
 
@@ -41,7 +48,6 @@ func bestSum(targetSum int, numbers []int) []int {
 	}
 	return shortestCombination
 }
-
 func memoBestSum(targetSum int, numbers []int, memo map[int][]int) []int {
 
 	var shortestCombination []int
