@@ -13,7 +13,7 @@ func BenchmarkGridTraveler(b *testing.B) {
 	args = append(args, "m")
 
 	for i := 0; i < b.N; i++ {
-		callGridTraveler(args)
+		CallGridTraveler(args)
 	}
 
 }
