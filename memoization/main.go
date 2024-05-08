@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	os.Args = append(os.Args, "howsum")
+	os.Args = append(os.Args, "bestsum")
 
 	if os.Args[1] == "fib" {
 		//os.Args = append(os.Args, "fib")
@@ -37,4 +37,7 @@ func main() {
 		CallHowSum(os.Args)
 	}
 
+	if os.Args[1] == "bestsum" {
+		CallBestSum(os.Args)
+	}
 }
