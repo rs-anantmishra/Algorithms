@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	os.Args = append(os.Args, "canconstruct")
+	os.Args = append(os.Args, "countconstruct")
 
 	if os.Args[1] == "fib" {
 		//os.Args = append(os.Args, "fib")
@@ -43,5 +43,9 @@ func main() {
 
 	if os.Args[1] == "canconstruct" {
 		CallCanConstruct(os.Args)
+	}
+
+	if os.Args[1] == "countconstruct" {
+		CallCountConstruct(os.Args)
 	}
 }
