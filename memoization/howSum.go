@@ -4,10 +4,15 @@ import "fmt"
 
 func CallHowSum(args []string) {
 
-	targetSum := 8
-	numbers := []int{5, 3, 4, 3}
+	var result []int
+	targetSum := 344
+	numbers := []int{7, 14}
 
-	result := howSum(targetSum, numbers)
+	//result = howSum(targetSum, numbers)
+	//fmt.Println(result)
+
+	memo := make(map[int][]int)
+	result = memoHowSum(targetSum, numbers, memo)
 	fmt.Println(result)
 
 }
@@ -33,5 +38,39 @@ func howSum(targetSum int, numbers []int) []int {
 
 	}
 
+	return result
+}
+
+func memoHowSum(targetSum int, numbers []int, memo map[int][]int) []int {
+	result := []int{}
+
+	//base cases
+	if targetSum == 0 {
+		return result
+	}
+	if targetSum < 0 {
+		return nil
+	}
+
+	//fast-return
+	elem, ok := memo[targetSum]
+	if ok {
+		return elem
+	}
+
+	for _, value := range numbers {
+		remainder := targetSum - value
+
+		result = memoHowSum(remainder, numbers, memo)
+		if result != nil {
+			//update memo
+			memo[remainder] = result
+			result = append(result, value)
+			return result
+		}
+	}
+
+	//update memo
+	memo[targetSum] = result
 	return result
 }
