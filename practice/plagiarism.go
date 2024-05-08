@@ -56,3 +56,4 @@ func longestSubsequence(text []string, wordbank []string) string {
 
 //string1: (i have) this book i like to read
 //string2: she has this book i like to watch
+//this is a test sample from an interview
