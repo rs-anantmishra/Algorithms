@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	os.Args = append(os.Args, "cansum")
+	os.Args = append(os.Args, "howsum")
 
 	if os.Args[1] == "fib" {
 		//os.Args = append(os.Args, "fib")
@@ -31,6 +31,10 @@ func main() {
 
 	if os.Args[1] == "cansum" {
 		CallCanSum(os.Args)
+	}
+
+	if os.Args[1] == "howsum" {
+		CallHowSum(os.Args)
 	}
 
 }
