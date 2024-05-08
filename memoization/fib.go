@@ -27,6 +27,7 @@ func main() {
 
 }
 
+// Complexity: Space - O(2^n), Time - O(n)
 func fib(n int) int {
 	if n <= 2 {
 		return 1
@@ -34,6 +35,7 @@ func fib(n int) int {
 	return fib(n-2) + fib(n-1)
 }
 
+// Complexity: Space - O(n), Time - O(n)
 func fibMemo(n int, m map[int]int) int {
 
 	_, ok := m[n]
