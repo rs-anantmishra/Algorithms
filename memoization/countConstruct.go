@@ -25,7 +25,7 @@ func CallCountConstruct(args []string) {
 	fmt.Println("enterapotentpot memoized", memoCountConstruct(targetWord, wordbank, memo))
 
 	targetWord = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef"
-	wordbank = []string{"e", "ee", "eee", "eeee", "eeeeeeeeeeeeee"}
+	wordbank = []string{"e", "ee", "eee", "eeee", "eeeee"}
 	//fmt.Println("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", countConstruct(targetWord, wordbank))
 	fmt.Println("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef memoized", memoCountConstruct(targetWord, wordbank, memo))
 
