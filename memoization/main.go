@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"time"
 )
 
 func main() {
@@ -20,7 +21,11 @@ func main() {
 		// os.Args = append(os.Args, "18")
 		// os.Args = append(os.Args, "18")
 		// os.Args = append(os.Args, "m")
+		start := time.Now()
 		callGridTraveler(os.Args)
+		elapsed := time.Since(start)
+		fmt.Println("elapsed time is ", elapsed)
+
 	}
 
 }
