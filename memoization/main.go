@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	os.Args = append(os.Args, "bestsum")
+	os.Args = append(os.Args, "canconstruct")
 
 	if os.Args[1] == "fib" {
 		//os.Args = append(os.Args, "fib")
