@@ -17,8 +17,8 @@ func CallBestSum(args []string) {
 	}
 
 	//allSum is not completed
-	//result := allSum(targetSum, numbers)
-	//fmt.Println(result)
+	result := allSum(targetSum, numbers)
+	fmt.Println(result)
 
 }
 
