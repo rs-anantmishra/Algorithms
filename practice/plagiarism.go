@@ -48,11 +48,3 @@ func longestSubsequence(text []string, wordbank []string) string {
 
 	return result
 }
-
-//<space> should be ignored to be used as a suffix
-//(i have) this book i like to read
-//for the same suffix and within a same contiguous sequence
-////////subtract from the wordbank if a word is used.
-
-//string1: (i have) this book i like to read
-//string2: she has this book i like to watch
