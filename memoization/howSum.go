@@ -8,12 +8,14 @@ func CallHowSum(args []string) {
 	targetSum := 344
 	numbers := []int{7, 14}
 
-	//result = howSum(targetSum, numbers)
-	//fmt.Println(result)
-
-	memo := make(map[int][]int)
-	result = memoHowSum(targetSum, numbers, memo)
-	fmt.Println(result)
+	if args[2] == "m" {
+		memo := make(map[int][]int)
+		result = memoHowSum(targetSum, numbers, memo)
+		fmt.Println(result)
+	} else {
+		result = howSum(targetSum, numbers)
+		fmt.Println(result)
+	}
 
 }
 
