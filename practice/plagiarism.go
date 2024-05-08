@@ -16,7 +16,7 @@ import (
 	"strings"
 )
 
-func main() {
+func Plagiarism() {
 	space := " "
 	resultSubsequence := []string{}
 	result := ""
