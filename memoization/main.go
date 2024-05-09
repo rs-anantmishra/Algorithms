@@ -48,4 +48,8 @@ func main() {
 	if os.Args[1] == "countconstruct" {
 		CallCountConstruct(os.Args)
 	}
+
+	if os.Args[1] == "allconstruct" {
+		CallAllConstruct(os.Args)
+	}
 }

@@ -39,7 +39,7 @@ func CallCountConstruct(args []string) {
 func countConstruct(targetWord string, wordbank []string) int {
 
 	result := 0
-	//base case
+	//base case``
 	if targetWord == "" {
 		result++
 		return result
@@ -48,7 +48,7 @@ func countConstruct(targetWord string, wordbank []string) int {
 	for _, v := range wordbank {
 		if strings.Index(targetWord, v) == 0 {
 			suffix, _ := strings.CutPrefix(targetWord, v)
-			if canConstruct(suffix, wordbank) {
+			if countConstruct(suffix, wordbank) > 0 {
 				result++
 			}
 		}
