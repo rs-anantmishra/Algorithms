@@ -24,10 +24,10 @@ func CallCountConstruct(args []string) {
 	fmt.Println("enterapotentpot", countConstruct(targetWord, wordbank))
 	fmt.Println("enterapotentpot memoized", memoCountConstruct(targetWord, wordbank, memo))
 
-	targetWord = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef"
-	wordbank = []string{"e", "ee", "eee", "eeee", "eeeee"}
+	//targetWord = "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef"
+	//wordbank = []string{"e", "ee", "eee", "eeee", "eeeee"}
 	//fmt.Println("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", countConstruct(targetWord, wordbank))
-	fmt.Println("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef memoized", memoCountConstruct(targetWord, wordbank, memo))
+	//fmt.Println("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef memoized", memoCountConstruct(targetWord, wordbank, memo))
 
 	targetWord = "purple"
 	wordbank = []string{"purp", "p", "ur", "le"}
@@ -48,8 +48,9 @@ func countConstruct(targetWord string, wordbank []string) int {
 	for _, v := range wordbank {
 		if strings.Index(targetWord, v) == 0 {
 			suffix, _ := strings.CutPrefix(targetWord, v)
-			if countConstruct(suffix, wordbank) > 0 {
-				result++
+			count := countConstruct(suffix, wordbank)
+			if count > 0 {
+				result = result + count
 			}
 		}
 	}
@@ -74,8 +75,9 @@ func memoCountConstruct(targetWord string, wordbank []string, memo map[string]in
 	for _, v := range wordbank {
 		if strings.Index(targetWord, v) == 0 {
 			suffix, _ := strings.CutPrefix(targetWord, v)
-			if memoCountConstruct(suffix, wordbank, memo) > 0 {
-				result++
+			counts := memoCountConstruct(suffix, wordbank, memo)
+			if counts > 0 {
+				result = result + counts
 				memo[targetWord] = result
 			}
 		}
