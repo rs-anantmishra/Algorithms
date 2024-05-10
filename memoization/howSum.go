@@ -37,7 +37,6 @@ func howSum(targetSum int, numbers []int) []int {
 			result = append(result, value)
 			return result
 		}
-
 	}
 
 	return result

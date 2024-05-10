@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	os.Args = append(os.Args, "countconstruct")
+	os.Args = append(os.Args, "allconstruct")
 
 	if os.Args[1] == "fib" {
 		//os.Args = append(os.Args, "fib")
