@@ -3,6 +3,7 @@ package main
 func main() {
 
 	//CallFib()
+	//CallGridTraveler()
 
-	CallGridTraveler()
+	CallCanSum()
 }
