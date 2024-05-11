@@ -2,5 +2,7 @@ package main
 
 func main() {
 
-	CallFib()
+	//CallFib()
+
+	CallGridTraveler()
 }

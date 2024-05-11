@@ -18,7 +18,7 @@ func fib(n int) int {
 	//seed values 0 & 1
 	slcFib[1] = 1
 
-	for i, _ := range slcFib {
+	for i := range slcFib {
 
 		//skip seed values
 		if i == 0 {
