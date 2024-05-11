@@ -4,8 +4,11 @@ import "fmt"
 
 func CallCanSum() {
 
-	result := canSum(7, []int{5, 3, 4})
-	fmt.Println(result)
+	fmt.Println(canSum(7, []int{2, 3}))
+	fmt.Println(canSum(7, []int{5, 3, 4, 7}))
+	fmt.Println(canSum(7, []int{2, 4}))
+	fmt.Println(canSum(8, []int{2, 3, 5}))
+	fmt.Println(canSum(300, []int{7, 14}))
 }
 
 func canSum(targetSum int, numbers []int) bool {
@@ -37,15 +40,14 @@ func canSum(targetSum int, numbers []int) bool {
 	//value at current index + how far we are looking ahead by
 	for i, v := range table {
 		if v {
-			for k := range numbers {
-				if len(table) > (i + k) {
-					table[i+k] = true //v + val
+			for _, val := range numbers {
+				if len(table) > (i + val) {
+					table[i+val] = true //v + val
 				}
 			}
 		}
 	}
 
-	fmt.Println(table)
 	result = table[targetSum-1]
 	return result
 }
