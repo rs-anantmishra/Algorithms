@@ -4,6 +4,8 @@ func main() {
 
 	//CallFib()
 	//CallGridTraveler()
+	//CallCanSum()
+	//CallHowSum()
 
-	CallCanSum()
+	CallBestSum()
 }

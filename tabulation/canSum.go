@@ -27,7 +27,6 @@ func canSum(targetSum int, numbers []int) bool {
 
 	//seed values - when pointer is on 0th, we have seed values in numbers array
 	//we are going to add values to get multiples
-
 	for _, value := range numbers {
 		//bounds check
 		if len(table) >= value {
