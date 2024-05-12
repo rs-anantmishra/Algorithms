@@ -6,6 +6,7 @@ func main() {
 	//CallGridTraveler()
 	//CallCanSum()
 	//CallHowSum()
+	//CallBestSum()
 
-	CallBestSum()
+	CallCanConstruct()
 }
