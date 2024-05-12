@@ -11,6 +11,7 @@ func CallAllConstruct() {
 
 func allConstruct(word string, dictionary []string) [][]string {
 
+	wl := len(word)
 	var table [][][]string
 
 	for k := 0; k < len(word)+1; k++ {
@@ -43,5 +44,5 @@ func allConstruct(word string, dictionary []string) [][]string {
 		}
 	}
 
-	return table[6]
+	return table[wl]
 }
