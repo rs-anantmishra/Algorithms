@@ -7,6 +7,7 @@ func main() {
 	//CallCanSum()
 	//CallHowSum()
 	//CallBestSum()
+	//CallCanConstruct()
 
-	CallCanConstruct()
+	CallCountConstruct()
 }
